@@ -1,0 +1,34 @@
+# Prerequisites
+*.d
+/template_code
+
+# Compiled Object files
+section_*/*/objs/*.slo
+section_*/*/objs/*.lo
+section_*/*/objs/*.o
+section_*/*/objs/*.obj
+
+# Precompiled Headers
+section_*/includes/*.gch
+section_*/includes/*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+/section_*/*/*.exe
+/section_*/*/*.out
+/section_*/*/*.app
+/section_*/*/code
