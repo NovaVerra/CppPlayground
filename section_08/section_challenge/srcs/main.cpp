@@ -25,19 +25,19 @@ void	section_challenge()
 	cin >> value_in_cents;
 	
 	dollar = value_in_cents / DOLLAR_VALUE;
-	value_in_cents -= dollar * DOLLAR_VALUE;
+	value_in_cents %= DOLLAR_VALUE;
 
 	quarter = value_in_cents / QUARTER_VALUE;
-	value_in_cents -= quarter * QUARTER_VALUE;
+	value_in_cents %= QUARTER_VALUE;
 
 	dime = value_in_cents / DIME_VALUE;
-	value_in_cents -= dime * DIME_VALUE;
+	value_in_cents %= DIME_VALUE;
 
 	nickle = value_in_cents / NICKLE_VALUE;
-	value_in_cents -= nickle * NICKLE_VALUE;
+	value_in_cents %= NICKLE_VALUE;
 
 	penny = value_in_cents / PENNY_VALUE;
-	value_in_cents -= penny * PENNY_VALUE;
+	value_in_cents %= PENNY_VALUE;
 
 	cout << "Dollar:  " << dollar << endl;
 	cout << "Quarter: " << quarter << endl;
