@@ -87,9 +87,7 @@ void	section_challenge()
 				cout << "\nInvalid menu option" << endl;
 				break;
 		}
-		if (user_selection == 'Q')
-			break;
-	} while (true);
+	} while (user_selection != 'Q');
 }
 
 void	print_menu()
