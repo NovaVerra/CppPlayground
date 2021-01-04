@@ -10,18 +10,21 @@ void	section_challenge()
 {
 	string	alphabet {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	string	key {"XZNLWEBGJHQDYVTKFUOMPCIASRxznlwebgjhqdyvtkfuompciasr"};
+	string	encrypted_message {""};
 
-	string	user_input {""};
+	string	decrypted_message {""};
 	cout << "Please enter your message: ";
-	getline(cin, user_input);
-	cout << "\nHere is your decrypted message: " << user_input << endl;
+	getline(cin, decrypted_message);
+	cout << "\nHere is your DEcrypted message: " << decrypted_message << endl;
 
-	for (size_t i {0}; i < user_input.size(); i++)
+	for (char c : decrypted_message)
 	{
-		if (!isalpha(user_input.at(i)))
-			continue;
-		int	letter_pos = alphabet.find(user_input.at(i));
-		user_input.at(i) = key.at(letter_pos);
+		size_t letter_pos {alphabet.find(c)};
+		if (letter_pos == string::npos && !isalpha(c))
+			encrypted_message += c;
+		else
+			encrypted_message += key.at(letter_pos);
 	}
-	cout << "Here is your encrypted message: " << user_input << endl;
+
+	cout << "Here is your ENcrypted message: " << encrypted_message << endl;
 }
