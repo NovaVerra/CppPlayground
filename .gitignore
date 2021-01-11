@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 /template_code
+/.vscode
 
 # Compiled Object files
 section_*/*/objs/*.slo
