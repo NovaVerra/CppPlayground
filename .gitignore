@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
 /template_code
+/template_code_no_class
 /.vscode
 
 # Compiled Object files
