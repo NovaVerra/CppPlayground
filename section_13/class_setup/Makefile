@@ -11,7 +11,8 @@ OBJDIR = ./objs/
 INCDIR = ./includes/
 
 # SRCS & OBJS
-SRCS = main.cpp
+SRCS = main.cpp \
+	Player.cpp
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 
 all: objs $(NAME)
