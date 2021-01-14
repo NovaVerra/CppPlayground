@@ -23,7 +23,13 @@ public:
 	// Mover
 	// Copier
 	// Basic getters
+	string	get_name();
+	int		get_health();
+	int		get_xp();
 	// Basic setters
+	bool	set_name(string name_to_set);
+	bool	set_health(int health_to_set);
+	bool	set_xp(int xp_to_set);
 	// Overloaders
 };
 
