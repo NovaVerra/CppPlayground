@@ -16,7 +16,6 @@ public:
 	// Constructors
 	Player();
 	Player(string name_to_set);
-	Player(string name_to_set, int health_to_set);
 	Player(string name_to_set, int health_to_set, int xp);
 	// Destructors
 	~Player();

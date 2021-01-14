@@ -9,11 +9,6 @@ int	main()
 
 void	section_challenge()
 {
-	// Player player_01 {};
-	// Player player_02 {"Frank"};
-	// Player player_03 {"Frank", 100};
-	// Player player_04 {"Frank", 100, 10};
-
-	Player *player_05 {new Player ("Leo", 100, 10)};
-	delete player_05;
+	Player *player_01 {new Player ("Leo", 100, 10)};
+	delete player_01;
 }
