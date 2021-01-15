@@ -14,9 +14,9 @@ private:
 
 public:
 	// Constructors
+	Player(string name_to_set, int health_to_set, int xp);
 	Player();
 	Player(string name_to_set);
-	Player(string name_to_set, int health_to_set, int xp);
 	// Destructors
 	~Player();
 	// Mover
@@ -26,9 +26,9 @@ public:
 	int		get_health();
 	int		get_xp();
 	// Basic setters
-	bool	set_name(string name_to_set);
-	bool	set_health(int health_to_set);
-	bool	set_xp(int xp_to_set);
+	void	set_name(string name_to_set);
+	void	set_health(int health_to_set);
+	void	set_xp(int xp_to_set);
 	// Overloaders
 };
 
