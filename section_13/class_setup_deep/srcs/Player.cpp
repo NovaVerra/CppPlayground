@@ -27,7 +27,14 @@ Player::~Player()
 /*********************************
 *             Mover              *
 *********************************/
-
+Player::Player(Player &&source) noexcept
+: Player {*source.name, *source.health, *source.xp}
+{
+	source.name = nullptr;
+	source.health = nullptr;
+	source.xp = nullptr;
+	cout << "Move Constructor executed" << endl;
+}
 
 
 /*********************************

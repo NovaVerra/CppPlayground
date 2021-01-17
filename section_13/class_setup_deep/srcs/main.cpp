@@ -14,6 +14,7 @@ void	display_player(Player p)
 
 void	section_challenge()
 {
-	Player player01 {};
-	display_player(player01);
+	vector<Player>	players;
+
+	players.push_back(Player{"player1", 100, 0});
 }

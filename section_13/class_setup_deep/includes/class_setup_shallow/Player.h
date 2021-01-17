@@ -20,6 +20,7 @@ public:
 	~Player();
 
 	// Mover
+	Player(Player &&source) noexcept;
 
 	// Copier
 	Player(const Player &source);
