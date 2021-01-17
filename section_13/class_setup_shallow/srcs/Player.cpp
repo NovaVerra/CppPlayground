@@ -1,4 +1,4 @@
-#include "../includes/class_setup/Player.h"
+#include "../includes/class_setup_shallow/Player.h"
 
 /*********************************
 *          Constructors          *
@@ -6,25 +6,8 @@
 Player::Player(string name_to_set, int health_to_set, int xp_to_set)
 : name {name_to_set}, health {health_to_set}, xp {xp_to_set}
 {
-	cout << name << endl;
-	cout << health << endl;
-	cout << xp << endl;
-}
-
-Player::Player()
-: Player {"None", 100, 0}
-{
-	cout << name << endl;
-	cout << health << endl;
-	cout << xp << endl;
-}
-
-Player::Player(string name_to_set)
-: Player {name_to_set, 100, 0}
-{
-	cout << name << endl;
-	cout << health << endl;
-	cout << xp << endl;
+	cout << name << ", " << health << ", " << xp << endl;
+	cout << "all-args constructor" << endl;
 }
 
 /*********************************
@@ -41,8 +24,11 @@ Player::~Player() {}
 /*********************************
 *             Copier             *
 *********************************/
-
-
+Player::Player(const Player &source)
+: Player {source.name, source.health, source.xp}
+{
+	cout << "Copy constructor called" << endl;
+}
 
 /*********************************
 *            Getters             *

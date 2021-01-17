@@ -6,6 +6,8 @@
 #include <vector>		// std::vector
 #include <iomanip>		// setw() | setprecision()
 
+#include "./Player.h"
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -16,5 +18,6 @@ using std::istream;
 using std::fstream;
 
 void	section_challenge();
+void	display_player(Player p);
 
 #endif

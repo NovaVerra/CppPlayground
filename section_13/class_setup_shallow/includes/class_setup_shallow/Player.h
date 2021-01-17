@@ -14,21 +14,26 @@ private:
 
 public:
 	// Constructors
-	Player(string name_to_set, int health_to_set, int xp);
-	Player();
-	Player(string name_to_set);
+	Player(string name_to_set = "Player", int health_to_set = 100, int xp = 0);
+	
 	// Destructors
 	~Player();
+
 	// Mover
+
 	// Copier
+	Player(const Player &source);
+
 	// Basic getters
 	string	get_name();
 	int		get_health();
 	int		get_xp();
+	
 	// Basic setters
 	void	set_name(string name_to_set);
 	void	set_health(int health_to_set);
 	void	set_xp(int xp_to_set);
+
 	// Overloaders
 };
 
