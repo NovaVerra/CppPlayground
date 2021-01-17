@@ -8,9 +8,9 @@ using std::endl;
 class Player
 {
 private:
-	string	name;
-	int		health;
-	int		xp;
+	string	*name;
+	int		*health;
+	int		*xp;
 
 public:
 	// Constructors

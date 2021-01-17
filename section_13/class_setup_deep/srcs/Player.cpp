@@ -4,16 +4,25 @@
 *          Constructors          *
 *********************************/
 Player::Player(string name_to_set, int health_to_set, int xp_to_set)
-: name {name_to_set}, health {health_to_set}, xp {xp_to_set}
 {
-	cout << name << ", " << health << ", " << xp << endl;
-	cout << "all-args constructor" << endl;
+	name = new string;
+	health = new int;
+	xp = new int;
+
+	*name = name_to_set;
+	*health = health_to_set;
+	*xp = xp_to_set;
 }
 
 /*********************************
 *           Destructor           *
 *********************************/
-Player::~Player() {}
+Player::~Player()
+{
+	delete name;
+	delete health;
+	delete xp;
+}
 
 /*********************************
 *             Mover              *
@@ -25,24 +34,22 @@ Player::~Player() {}
 *             Copier             *
 *********************************/
 Player::Player(const Player &source)
-: Player {source.name, source.health, source.xp}
-{
-	cout << "Copy constructor called" << endl;
-}
+: Player {*source.name, *source.health, *source.xp}
+{}
 
 /*********************************
 *            Getters             *
 *********************************/
-string	Player::get_name() { return name; }
-int		Player::get_health() { return health; }
-int		Player::get_xp() { return xp; }
+string	Player::get_name() { return *name; }
+int		Player::get_health() { return *health; }
+int		Player::get_xp() { return *xp; }
 
 /*********************************
 *            Setters             *
 *********************************/
-void	Player::set_name(string name_to_set) { name = name_to_set; }
-void	Player::set_health(int health_to_set) { health = health_to_set; }
-void	Player::set_xp(int xp_to_set) { xp = xp_to_set; }
+void	Player::set_name(string name_to_set) { *name = name_to_set; }
+void	Player::set_health(int health_to_set) { *health = health_to_set; }
+void	Player::set_xp(int xp_to_set) { *xp = xp_to_set; }
 
 /*********************************
 *          Overloaders           *
