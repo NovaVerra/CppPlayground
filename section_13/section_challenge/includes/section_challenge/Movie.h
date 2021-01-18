@@ -2,7 +2,10 @@
 #define _MOVIE_H_
 
 #include <iostream>
+#include <string>
 using std::string;
+using std::cout;
+using std::endl;
 
 enum	Rating{ G, PG, PG13, R };
 
@@ -29,11 +32,13 @@ public:
 	string	get_name() const;
 	Rating	get_rating() const;
 	int		get_view_count() const;
+	void	display_movie() const;
 
 	// Basic setters
 	void	set_name(string name_to_set);
 	void	set_rating(Rating rating_to_set);
 	void	set_view_count(int view_count_to_set);
+	void	increment_view_count();
 
 	// Overloaders
 };
