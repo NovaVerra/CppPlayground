@@ -18,6 +18,7 @@ using std::istream;
 using std::fstream;
 
 void	section_challenge();
-void	display_player(Player p);
+void	display_number_of_players(Player &p);
+void	display_player(Player &p);
 
 #endif

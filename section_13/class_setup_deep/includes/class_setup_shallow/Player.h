@@ -8,9 +8,10 @@ using std::endl;
 class Player
 {
 private:
-	string	*name;
-	int		*health;
-	int		*xp;
+	static int	num_of_players;
+	string		*name;
+	int			*health;
+	int			*xp;
 
 public:
 	// Constructors
@@ -26,14 +27,15 @@ public:
 	Player(const Player &source);
 
 	// Basic getters
-	string	get_name() const;
-	int		get_health() const;
-	int		get_xp() const;
+	static int	get_num_of_players();
+	string		get_name() const;
+	int			get_health() const;
+	int			get_xp() const;
 	
 	// Basic setters
-	void	set_name(string name_to_set);
-	void	set_health(int health_to_set);
-	void	set_xp(int xp_to_set);
+	void		set_name(string name_to_set);
+	void		set_health(int health_to_set);
+	void		set_xp(int xp_to_set);
 
 	// Overloaders
 };
