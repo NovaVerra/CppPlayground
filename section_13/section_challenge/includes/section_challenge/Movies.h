@@ -1,14 +1,24 @@
-#ifndef _CLASS_H_
-#define _CLASS_H_
+#ifndef _MOVIES_H_
+#define _MOVIES_H_
 
-class Class
+class Movies
 {
+private:
+
+
+public:
 	// Constructors
+
 	// Destructors
+
 	// Mover
+
 	// Copier
+
 	// Basic getters
+
 	// Basic setters
+
 	// Overloaders
 };
 

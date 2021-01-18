@@ -12,7 +12,7 @@ INCDIR = ./includes/
 
 # SRCS & OBJS
 SRCS = main.cpp \
-		class.cpp
+		Movie.cpp
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 
 all: objs $(NAME)

@@ -1,7 +1,13 @@
 #include "../includes/section_challenge/header.h"
+#include "../includes/section_challenge/Movie.h"
 
-int	main(int argc, char **argv)
+int		main()
+{
+	section_challenge();
+	return 0;
+}
+
+void	section_challenge()
 {
 
-	return 0;
 }
