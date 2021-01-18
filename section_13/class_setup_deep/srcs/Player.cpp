@@ -61,4 +61,3 @@ void	Player::set_xp(int xp_to_set) { *xp = xp_to_set; }
 /*********************************
 *          Overloaders           *
 *********************************/
-
