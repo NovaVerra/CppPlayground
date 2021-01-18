@@ -25,9 +25,9 @@ public:
 	Player(const Player &source);
 
 	// Basic getters
-	string	get_name();
-	int		get_health();
-	int		get_xp();
+	string	get_name() const;
+	int		get_health() const;
+	int		get_xp() const;
 	
 	// Basic setters
 	void	set_name(string name_to_set);

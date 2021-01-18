@@ -47,9 +47,9 @@ Player::Player(const Player &source)
 /*********************************
 *            Getters             *
 *********************************/
-string	Player::get_name() { return *name; }
-int		Player::get_health() { return *health; }
-int		Player::get_xp() { return *xp; }
+string	Player::get_name() const { return *name; }
+int		Player::get_health() const { return *health; }
+int		Player::get_xp() const { return *xp; }
 
 /*********************************
 *            Setters             *
