@@ -5,12 +5,10 @@
 *********************************/
 MyString::MyString()
 : MyString {nullptr}
-{
-	str = new char[1];
-	*str = '\0';
-}
+{}
 
 MyString::MyString(const char *s)
+: str {nullptr}
 {
 	if (s == nullptr)
 	{
@@ -28,7 +26,10 @@ MyString::MyString(const char *s)
 /*********************************
 *           Destructor           *
 *********************************/
-MyString::~MyString() { delete [] str; }
+MyString::~MyString()
+{
+	delete [] str;
+}
 
 /*********************************
 *             Mover              *
@@ -38,11 +39,8 @@ MyString::~MyString() { delete [] str; }
 *             Copier             *
 *********************************/
 MyString::MyString(const MyString &source)
-: MyString {nullptr}
-{
-	str = new char[strlen(source.str) + 1];
-	strcpy(str, source.str);
-}
+: MyString {source.str}
+{}
 
 /*********************************
 *            Getters             *
