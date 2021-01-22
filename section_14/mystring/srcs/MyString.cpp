@@ -110,13 +110,13 @@ MyString		MyString::operator+(const MyString &rhs) const
 	return temp;
 }
 
-ostream	&operator<<(ostream os, const MyString &rhs)
+ostream	&operator<<(ostream &os, const MyString &rhs)
 {
 	os << rhs.str;
 	return os;
 }
 
-istream	&operator>>(istream is, MyString &rhs)
+istream	&operator>>(istream &is, MyString &rhs)
 {
 	char	*buff {new char [1000]};
 	is >> buff;

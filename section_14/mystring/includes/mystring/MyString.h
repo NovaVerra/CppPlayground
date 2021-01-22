@@ -44,8 +44,8 @@ public:
 	MyString		operator-() const;
 	bool			operator==(const MyString &rhs) const;
 	MyString		operator+(const MyString &rhs) const;
-	friend ostream	&operator<<(ostream os, const MyString &rhs);
-	friend istream	&operator>>(istream is, MyString &rhs);
+	friend ostream	&operator<<(ostream &os, const MyString &rhs);
+	friend istream	&operator>>(istream &is, MyString &rhs);
 };
 
 #endif
