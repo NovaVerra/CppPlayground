@@ -9,6 +9,8 @@ using std::strcpy;
 using std::cout;
 using std::endl;
 using std::tolower;
+using std::istream;
+using std::ostream;
 
 class MyString
 {
@@ -37,11 +39,13 @@ public:
 	// Basic setters
 
 	// Overloaded Constructor
-	MyString	&operator=(const MyString &rhs);	// Copy
-	MyString	&operator=(MyString &&rhs);		// Move
-	MyString	operator-() const;
-	bool		operator==(const MyString &rhs) const;
-	MyString	operator+(const MyString &rhs) const;
+	MyString		&operator=(const MyString &rhs);	// Copy
+	MyString		&operator=(MyString &&rhs);		// Move
+	MyString		operator-() const;
+	bool			operator==(const MyString &rhs) const;
+	MyString		operator+(const MyString &rhs) const;
+	friend ostream	&operator<<(ostream os, const MyString &rhs);
+	friend istream	&operator>>(istream is, MyString &rhs);
 };
 
 #endif

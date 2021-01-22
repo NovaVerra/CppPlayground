@@ -61,7 +61,7 @@ int			MyString::get_len() const { return strlen(str); }
 /*********************************
 *          Overloaders           *
 *********************************/
-MyString	&MyString::operator=(const MyString &rhs)
+MyString		&MyString::operator=(const MyString &rhs)
 {
 	if (this == &rhs)
 		return *this;
@@ -71,7 +71,7 @@ MyString	&MyString::operator=(const MyString &rhs)
 	return *this;
 }
 
-MyString	&MyString::operator=(MyString &&rhs)
+MyString		&MyString::operator=(MyString &&rhs)
 {
 	if (this == &rhs)
 		return *this;
@@ -81,7 +81,7 @@ MyString	&MyString::operator=(MyString &&rhs)
 	return *this;
 }
 
-MyString	MyString::operator-() const
+MyString		MyString::operator-() const
 {
 	char	*buff {new char [strlen(str) + 1]};
 	strcpy(buff, str);
@@ -92,7 +92,7 @@ MyString	MyString::operator-() const
 	return temp;
 }
 
-bool		MyString::operator==(const MyString &rhs) const
+bool			MyString::operator==(const MyString &rhs) const
 {
 	if (strcmp(str, rhs.str) == 0)
 		return true;
@@ -100,7 +100,7 @@ bool		MyString::operator==(const MyString &rhs) const
 		return false;
 }
 
-MyString	MyString::operator+(const MyString &rhs) const
+MyString		MyString::operator+(const MyString &rhs) const
 {
 	char	*buff {new char [strlen(str) + strlen(rhs.str) + 1]};
 	strcpy(buff, str);
@@ -108,4 +108,19 @@ MyString	MyString::operator+(const MyString &rhs) const
 	MyString temp {buff};
 	delete [] buff;
 	return temp;
+}
+
+ostream	&operator<<(ostream os, const MyString &rhs)
+{
+	os << rhs.str;
+	return os;
+}
+
+istream	&operator>>(istream is, MyString &rhs)
+{
+	char	*buff {new char [1000]};
+	is >> buff;
+	rhs = MyString {buff};
+	delete [] buff;
+	return is;
 }
