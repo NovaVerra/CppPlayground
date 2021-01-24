@@ -5,6 +5,7 @@
 #include <string>		// CPP-style string (objects)
 #include <vector>		// std::vector
 #include <iomanip>		// setw() | setprecision()
+#include "./MyString.h"
 
 using std::cout;
 using std::cin;
