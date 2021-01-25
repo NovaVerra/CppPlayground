@@ -12,6 +12,7 @@ using std::ostream;
 using std::istream;
 using std::strlen;
 using std::tolower;
+using std::strcmp;
 
 class	MyString
 {
@@ -43,6 +44,16 @@ public:
 	MyString		&operator=(const MyString &rhs);
 	MyString		&operator=(MyString &&rhs);
 	MyString		operator-() const;
+	bool			operator==(const MyString &rhs) const;
+	bool			operator!=(const MyString &rhs) const;
+	bool			operator<(const MyString &rhs) const;
+	bool			operator>(const MyString &rhs) const;
+	MyString		operator+(const MyString &rhs) const;
+	MyString		&operator+=(const MyString &rhs);
+	MyString		operator*(size_t n);
+	MyString		&operator*=(size_t n);
+	MyString		&operator++();
+	MyString		operator++(int);
 };
 
 #endif

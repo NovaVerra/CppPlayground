@@ -5,7 +5,6 @@
 #include <string>		// CPP-style string (objects)
 #include <vector>		// std::vector
 #include <iomanip>		// setw() | setprecision()
-#include "./MyString.h"
 
 using std::cout;
 using std::cin;
@@ -15,6 +14,7 @@ using std::vector;
 using std::ostream;
 using std::istream;
 using std::fstream;
+using std::boolalpha;
 
 void	section_challenge();
 
