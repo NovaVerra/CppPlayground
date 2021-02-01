@@ -12,6 +12,7 @@ using std::strcpy;
 using std::strcat;
 using std::ostream;
 using std::istream;
+using std::boolalpha;
 
 class MyString
 {
@@ -50,6 +51,8 @@ public:
 	MyString		&operator+=(const MyString &rhs);
 	MyString		operator*(size_t n) const;
 	MyString		&operator*=(size_t n);
+	MyString		&operator++();		// post-increment
+	MyString		operator++(int);	// pre-increment
 };
 
 #endif

@@ -153,3 +153,14 @@ MyString	&MyString::operator*=(size_t n)
 	*this = *this * n;
 	return *this;
 }
+
+MyString	&MyString::operator++()
+{
+	
+}
+
+MyString	MyString::operator++(int)
+{
+	MyString res {*this};
+gi
+}
