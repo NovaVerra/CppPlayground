@@ -122,7 +122,7 @@ MyString	&MyString::operator+=(const MyString &rhs)
 	return *this;
 }
 
-MyString	MyString::operator*(int n) const
+MyString	MyString::operator*(size_t n) const
 {
 	MyString res {};
 	for (size_t i {0}; i < n; i++)
@@ -130,7 +130,7 @@ MyString	MyString::operator*(int n) const
 	return res;
 }
 
-MyString	&MyString::operator*=(int n)
+MyString	&MyString::operator*=(size_t n)
 {
 	*this = *this * n;
 	return *this;

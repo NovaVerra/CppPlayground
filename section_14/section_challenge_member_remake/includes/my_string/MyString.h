@@ -45,8 +45,8 @@ public:
 	MyString		operator-() const;								// tested
 	MyString		operator+(const MyString &rhs) const;			// tested
 	MyString		&operator+=(const MyString &rhs);				// tested
-	MyString		operator*(int n) const;
-	MyString		&operator*=(int n);
+	MyString		operator*(size_t n) const;
+	MyString		&operator*=(size_t n);
 	bool			operator==(const MyString &rhs) const;			// tested
 	bool			operator!=(const MyString &rhs) const;			// tested
 	bool			operator<(const MyString &rhs) const;			// tested
