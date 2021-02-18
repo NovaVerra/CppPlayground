@@ -5,9 +5,7 @@
 *********************************/
 SavingsAccount::SavingsAccount(string name_to_set, double balance_to_set, double interest_rate_to_set)
 : Account {name_to_set, balance_to_set}, interest_rate {interest_rate_to_set}
-{
-	interest_rate = interest_rate_to_set;
-}
+{}
 
 /*********************************
 *           Destructor           *

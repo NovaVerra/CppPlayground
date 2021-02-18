@@ -13,7 +13,10 @@ INCDIR = ./includes/
 # SRCS & OBJS
 SRCS = main.cpp \
 		Account.cpp \
-		SavingsAccount.cpp
+		SavingsAccount.cpp \
+		CheckingAccount.cpp \
+		TrustAccount.cpp \
+
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 
 all: objs $(NAME)

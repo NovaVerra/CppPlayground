@@ -13,16 +13,16 @@ using std::string;
 class SavingsAccount : public Account
 {
 private:
-	static constexpr char	*def_name = "Default Savings Account";
-	static constexpr double	def_balance = 0.0;
-	static constexpr double	def_interest_rate = 0.0;
+	static constexpr char	default_name[] = "Default Savings Account";
+	static constexpr double	default_balance = 0.0;
+	static constexpr double	default_interest_rate = 0.0;
 
 protected:
 	double	interest_rate;
 
 public:
 	// Constructors
-	SavingsAccount(string name_to_set = def_name, double balance_to_set = def_balance, double interest_rate_to_set = def_interest_rate);
+	SavingsAccount(string name_to_set = default_name, double balance_to_set = default_balance, double interest_rate_to_set = default_interest_rate);
 
 	// Destructors
 	~SavingsAccount();
