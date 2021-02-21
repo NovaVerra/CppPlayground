@@ -14,7 +14,7 @@ class CheckingAccount : public Account
 {
 private:
 	static constexpr char	default_name[] = "Default Checking Account";
-	static constexpr double	default_balance = 5000.0;
+	static constexpr double	default_balance = 25000.0;
 	static constexpr double	default_withdraw_fee = 1.5;
 
 protected:

@@ -14,9 +14,9 @@ class TrustAccount : public SavingsAccount
 {
 private:
 	static constexpr char	default_name[] = "Default Trust Account";
-	static constexpr double	default_balance = 5000.0;
-	static constexpr double	default_interest_rate = 0.0;
-	static constexpr double	default_deposit_bonus = 200;
+	static constexpr double	default_balance = 25000.0;
+	static constexpr double	default_interest_rate = 2.5;
+	static constexpr double	default_deposit_bonus = 500;
 	static constexpr int	default_withdraw_limit = 4;
 
 protected:

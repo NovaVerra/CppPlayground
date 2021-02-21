@@ -14,8 +14,8 @@ class SavingsAccount : public Account
 {
 private:
 	static constexpr char	default_name[] = "Default Savings Account";
-	static constexpr double	default_balance = 0.0;
-	static constexpr double	default_interest_rate = 0.0;
+	static constexpr double	default_balance = 25000.0;
+	static constexpr double	default_interest_rate = 2.5;
 
 protected:
 	double	interest_rate;
