@@ -20,7 +20,7 @@ bool	CheckingAccount::withdraw(double amount)
 {
 	cout << "Checking Account - withdraw" << endl;
 	return Account::withdraw(amount + withdraw_fee);
-}w
+}
 
 /*********************************
 *            Getters             *
