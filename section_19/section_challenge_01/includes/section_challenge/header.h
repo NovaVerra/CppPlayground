@@ -16,8 +16,15 @@ using std::size;
 using std::setw;
 using std::setfill;
 using std::left;
+using std::right;
 using std::fixed;
 using std::setprecision;
+
+#define	COUNTRY_WIDTH	12
+#define	CITY_WIDTH		12
+#define	POP_WIDTH		12
+#define	COST_WIDTH		12
+#define HEADER_WIDTH	48
 
 struct	City
 {

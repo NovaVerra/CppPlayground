@@ -39,14 +39,17 @@ int	main()
 
 void	display_header(const Tours &tours)
 {
-	cout << tours.title << endl;
-	cout << std::setw(47) << std::setfill('=') << "" << endl;
+	cout << right << std::setw(HEADER_WIDTH / 2 + HEADER_WIDTH / 7) << tours.title << endl;
+
+	cout << std::setw(HEADER_WIDTH) << std::setfill('=') << "" << endl;
 	cout << setfill(' ');
-	cout << left << setw(12) << "Country";
-	cout << left << setw(12) << "City";
-	cout << left << setw(15) << "Population";
-	cout << left << setw(12) << "Cost" << endl;
-	cout << std::setw(47) << std::setfill('-') << "" << endl;
+
+	cout << left << setw(COUNTRY_WIDTH) << "Country";
+	cout << left << setw(CITY_WIDTH) << "City";
+	cout << right << setw(POP_WIDTH) << "Population";
+	cout << right << setw(COST_WIDTH) << "Cost" << endl;
+
+	cout << std::setw(HEADER_WIDTH) << std::setfill('-') << "" << endl;
 	cout << setfill(' ');
 }
 
@@ -64,7 +67,7 @@ void	display_country(const Country &country)
 	for (auto city : country.cities)
 	{
 		if (counter != 0)
-			cout << std::setw(12) << std::setfill(' ') << "";
+			cout << std::setw(COUNTRY_WIDTH) << std::setfill(' ') << "";
 		display_city(city);
 		counter++;
 	};
@@ -73,8 +76,7 @@ void	display_country(const Country &country)
 
 void	display_city(const City &city)
 {
-	cout << left << setw(12) << city.name;
-	cout << left << setw(15) << city.population;
-	cout << "$";
-	cout << left << fixed << setprecision(2) << setw(12) << city.cost << endl;
+	cout << left << setw(CITY_WIDTH) << city.name;
+	cout << right << setw(POP_WIDTH) << city.population;
+	cout << right << fixed << setprecision(2) << setw(COST_WIDTH) << city.cost << endl;
 }
