@@ -17,6 +17,8 @@ using std::vector;
 using std::ifstream;
 using std::ofstream;
 using std::getline;
+using std::setw;
+using std::left;
 
 /* Insert Function Prototypes Here */
 

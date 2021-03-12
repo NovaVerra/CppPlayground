@@ -17,10 +17,13 @@ int	main()
 
 	while (getline(in_file, line))
 	{
-		out_file << line_number << "\t";
+		out_file << setw(7) << left << line_number << "\t";
 		out_file << line << endl;
 		line_number++;
 	}
+
+	in_file.close();
+	out_file.close();
 
 	return 0;
 }
