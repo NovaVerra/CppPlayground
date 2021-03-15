@@ -18,6 +18,7 @@ using std::find;
 using std::count;
 using std::replace;
 using std::all_of;
+using std::transform;
 
 /* Insert Function Prototypes Here */
 

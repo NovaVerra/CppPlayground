@@ -51,11 +51,19 @@ void	all_of_test()
 	// any_of() is also a valid function as well!
 }
 
+void	string_transform()
+{
+	string	str {"This is a test"};
+	transform(str.begin(), str.end(), str.begin(), ::toupper);
+	cout << str << endl;
+}
+
 int		main()
 {
 	// find_test();
 	// count_test();
 	// replace_test();
-	all_of_test();
+	// all_of_test();
+	string_transform();
 	return 0;
 }
