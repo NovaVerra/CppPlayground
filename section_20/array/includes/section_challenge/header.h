@@ -7,6 +7,7 @@
 #include <iomanip>		// setw() | setprecision()
 #include <array>
 #include <algorithm>
+#include <numeric>
 
 using std::cout;
 using std::cin;
@@ -18,6 +19,9 @@ using std::sort;
 using std::min_element;
 using std::max_element;
 using std::adjacent_find;
+using std::accumulate;
+using std::count;
+using std::count_if;
 
 /* Insert Function Prototypes Here */
 

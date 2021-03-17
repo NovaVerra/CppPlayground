@@ -82,27 +82,32 @@ void	test_05()
 void	test_06()
 {
 	array<int, 5>	arr {1, 2, 3, 3, 5};
-	
+	auto			it = adjacent_find(arr.begin(), arr.end());
+	cout << *it << endl;
 }
 
 void	test_07()
 {
-
+	array<int, 5>	arr {1, 2, 3, 4, 5};
+	int	sum = accumulate(arr.begin(), arr.end(), 0);
+	cout << sum << endl;
 }
 
 void	test_08()
 {
-
+	array<int, 8>	arr {1, 2, 3, 4, 3, 3, 3, 3};
+	int	sum = count(arr.begin(), arr.end(), 3);
+	cout << sum << endl;
 }
 
 void	test_09()
 {
-
-}
-
-void	test_10()
-{
-
+	array<int, 10>	arr {1, 50, 51, 52, 53, 9, 8, 6, 5, 4};
+	int	sum = count_if(arr.begin(), arr.end(), [](int x)
+	{
+		return ((x >= 50) && (x <= 100));
+	});
+	cout << sum << endl;
 }
 
 int	main()
@@ -111,11 +116,10 @@ int	main()
 	// test_02();
 	// test_03();
 	// test_04();
-	test_05();
-	test_06();
-	test_07();
-	test_08();
+	// test_05();
+	// test_06();
+	// test_07();
+	// test_08();
 	test_09();
-	test_10();
 	return 0;
 }
